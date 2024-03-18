@@ -131,23 +131,23 @@ class SC16IS75X : public Stream
         void pinMode(uint8_t pin, uint8_t io);
         void digitalWrite(uint8_t pin, uint8_t value);
         uint8_t digitalRead(uint8_t pin);
-		uint8_t ping();
+	uint8_t ping();
 	//	void setTimeout(uint32_t);
 	//	size_t readBytes(char *buffer, size_t length);
-		int peek();
-		void flush();
-		uint8_t GPIOGetPortState(void);
-		uint8_t InterruptPendingTest(void);
-		void    SetPinInterrupt(uint8_t io_int_ena);
-		void    InterruptControl(uint8_t int_ena);
-		void    ModemPin(uint8_t gpio); //gpio == 0, gpio[7:4] are modem pins, gpio == 1 gpio[7:4] are gpios
-		void    GPIOLatch(uint8_t latch);
+	int peek();
+	void flush();
+	uint8_t GPIOGetPortState(void);
+	uint8_t InterruptPendingTest(void);
+	void    SetPinInterrupt(uint8_t io_int_ena);
+	void    InterruptControl(uint8_t int_ena);
+	void    ModemPin(uint8_t gpio); //gpio == 0, gpio[7:4] are modem pins, gpio == 1 gpio[7:4] are gpios
+	void    GPIOLatch(uint8_t latch);
         
     
     private:
         uint8_t device_address_sspin;
         uint8_t protocol;
-		uint8_t serial_device_channel;
+	uint8_t serial_device_channel;
 	//	uint32_t timeout;
         int16_t SetBaudrate(uint32_t baudrate);
         uint8_t ReadRegister(uint8_t reg_addr);
