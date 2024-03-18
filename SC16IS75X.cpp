@@ -69,10 +69,10 @@ void SC16IS75X::begin(uint32_t baud)
 		SPI.begin();
 
 	};
-	//no reset, resets the settings of the previously initialized channel of the same IC
+    //no reset, resets the settings of the previously initialized channel of the same IC
     //ResetDevice();
     FIFOEnable(1);
-	SetBaudrate(baud);
+    SetBaudrate(baud);
     SetLine(8,0,1);
 }
 
